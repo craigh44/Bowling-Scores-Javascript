@@ -9,12 +9,12 @@ describe('Frames', function(){
 describe('Frames', function() {
 
 		it('Should have 2 turns', function(){
-			expect(frame.turnsRemaining.length).toEqual(2)
+			expect(frame.turnsRemaining).toEqual(2)
 		});
 
 		it('Should have 1 turn after first turn is taken', function () {
 			frame.play(frame, 7)
-			expect(frame.turnsRemaining.length).toEqual(1)
+			expect(frame.turnsRemaining).toEqual(1)
 		});
 
 		it('Should know the score', function(){
@@ -24,7 +24,7 @@ describe('Frames', function() {
 
 		it('Should have 0 turns remaining if there is a strike', function (){
 			frame.play(frame, 10)
-			expect(frame.turnsRemaining.length).toEqual(0)
+			expect(frame.turnsRemaining).toEqual(0)
 		});
 
 	});
